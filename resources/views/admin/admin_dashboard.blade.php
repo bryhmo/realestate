@@ -66,8 +66,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/buttons.html')}}">Buttons</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/cards.html')}}">Cards</a>
                     </div>
                 </div>
             </li>
@@ -83,10 +83,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="{{asset('../assets/pages/utilities-color.html')}}">Colors</a>
-                        <a class="collapse-item" href="{{asset('../assets/pages/utilities-border.html')}}">Borders</a>
-                        <a class="collapse-item" href="{{asset('../assets/pages/utilities-animation.html')}}">Animations</a>
-                        <a class="collapse-item" href="{{asset('../assets/pages/utilities-other.html')}}">Other</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/utilities-color.html')}}">Colors</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/utilities-border.html')}}">Borders</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/utilities-animation.html')}}">Animations</a>
+                        <a class="collapse-item" href="{{asset('../backend/pages/utilities-other.html')}}">Other</a>
                     </div>
                 </div>
             </li>
@@ -109,7 +109,7 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="{{asset('../views/auth/login.blade.php')}}">Login</a>
                         <a class="collapse-item" href="register.html">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
@@ -401,7 +401,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$216,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
