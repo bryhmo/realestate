@@ -11,4 +11,8 @@ class AdminController extends Controller
         return view('admin.admin_dashboard');
 
     }//this is the end of the admin contoler method for the admin only 
+
+    public function AdminLogin(){
+        return view('admin.admin_login');
+    }//end method ... this is the method for the admin login 
 }

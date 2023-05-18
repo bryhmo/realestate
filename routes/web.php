@@ -40,3 +40,5 @@ Route::middleware(['auth','role:agent'])->group(function(){
     Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
 });//this is the end of the route protected admin route from been accessed by the other users like agent and the users
 
+
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');

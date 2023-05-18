@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    ?
 
 <head>
 
@@ -74,7 +75,10 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="6
+                                        
+                                        D
+                                        register.html">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
