@@ -44,6 +44,12 @@
                                     </div>
                                     <form  method= "POST" action ="{{route('admin.dashboard')}}" class="user">
                                         @csrf
+                                         <!-- making the wrong choice? -->
+                                <div class="text-center">
+                                    <p class="lead text-red-800 mb-5">Page Found ? </p>
+                                    <p class="text-green-500 mb-0">If it looks like you have make the wrong choice click down to go back to the Dashboard</p>
+                                    <a href="{{route('admin.dashboard')}}">&larr; Back to Dashboard</a>
+                                </div>
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp" name ="login" 

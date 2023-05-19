@@ -25,7 +25,6 @@
 <body class="bg-gradient-primary">
 
     <div class="container">
-
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
@@ -38,6 +37,12 @@
                             </div>
                             <form Method ="POST" action="{{route('register')}}" class="user">
                                 @csrf
+                                <!-- making the wrong choice? -->
+                                <div class="text-center">
+                                    <p class="lead text-red-800 mb-5">Page Found ? </p>
+                                    <p class="text-green-500 mb-0">If it looks like you have make the wrong choice click down to go back to the Dashboard</p>
+                                    <a href="{{route('admin.dashboard')}}">&larr; Back to Dashboard</a>
+                                </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="exampleFirstName"
@@ -83,6 +88,8 @@
                         </div>
                     </div>
                 </div>
+
+               
             </div>
         </div>
 
