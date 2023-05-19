@@ -50,3 +50,6 @@ Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.
 
 //the route below is the Admin dashboard register route , bc admin needs to login before been protected 
 Route::get('/admin/register', [AdminController::class, 'AdminRegister'])->name('admin.register');
+
+//the route below works for the forgetpassword module
+Route::get('/admin/forgetpassword', [AdminController::class, 'AdminPasswordReset'])->name('admin.forgetpassword');

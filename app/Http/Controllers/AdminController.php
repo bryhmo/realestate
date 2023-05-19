@@ -35,4 +35,9 @@ class AdminController extends Controller
     public function AdminRegister(){
         return view('admin.admin_register');
     }
+
+    //the method below works for the reset password from the admin side 
+    public function AdminPasswordReset(){
+        return view('admin.admin_forgetpassword');
+    }
 }
