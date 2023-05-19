@@ -114,7 +114,7 @@
                         <a class="collapse-item" href="{{route('admin.forgetpassword')}}">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="{{route('admin.404')}}">404 Page</a>
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>

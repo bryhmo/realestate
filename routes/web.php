@@ -53,3 +53,10 @@ Route::get('/admin/register', [AdminController::class, 'AdminRegister'])->name('
 
 //the route below works for the forgetpassword module
 Route::get('/admin/forgetpassword', [AdminController::class, 'AdminPasswordReset'])->name('admin.forgetpassword');
+
+
+//the  route below work fon the 404 error module of the admin dashboard
+Route::get('/admin/404',[AdminController::class,'Admin404'])->name('admin.404');
+
+//the route bbelow work fon the 404 error module of the admin dashboard
+Route::get('/admin/blank',[AdminController::class,'AdminBlank'])->name('admin.blank');

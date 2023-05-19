@@ -40,4 +40,13 @@ class AdminController extends Controller
     public function AdminPasswordReset(){
         return view('admin.admin_forgetpassword');
     }
+
+    public function Admin404(){
+        return view('admin.admin_404');
+    }//end the error 404 method 
+
+    //this method below is for the Admin blank page 
+    public function AdminBlank(){
+        return view('admin.admin_blank');
+    }
 }
