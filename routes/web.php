@@ -33,17 +33,24 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-//the below  middleware prevent any other users from accesing the Admin Dashboard
+//ADMIN GROUP MIDDLEWARE
+
 Route::middleware(['auth','role:admin'])->group(function(){
-    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');//admin dashboard route ,protected 
-    Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');//logout route ,protected 
+    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard'); 
+    Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
+    Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
+    
 });
 
+//END ADMIN GROUP MIDDLEWARE
 
-//the below middelware prevent any other users from accesssing the agent dashboard
+
+//AGENT GROUP MIDDLEWARE
 Route::middleware(['auth','role:agent'])->group(function(){
     Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-});//this is the end of the route protected admin route from been accessed by the other users like agent and the users
+});
+//END AGENT MIDDLEWARE
+
 
 //the route below is the Admin dashboard login route , bc admin needs to login before been protected 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
@@ -60,3 +67,6 @@ Route::get('/admin/404',[AdminController::class,'Admin404'])->name('admin.404');
 
 //the route bbelow work fon the 404 error module of the admin dashboard
 Route::get('/admin/blank',[AdminController::class,'AdminBlank'])->name('admin.blank');
+
+//start index
+Route::get('/admin/index',[AdminController::class,'AdminIndex'])->name('admin.index');

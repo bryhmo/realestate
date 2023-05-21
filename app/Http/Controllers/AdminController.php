@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 //this is the controller for the admincontroller for the admin only
 
 class AdminController extends Controller
@@ -20,7 +21,7 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
-    }
+    }//END THE LOGOUT METHOD 
 
     //this Method  return view to the admin dashboard 
     public function AdminDashboard(){
@@ -48,5 +49,18 @@ class AdminController extends Controller
     //this method below is for the Admin blank page 
     public function AdminBlank(){
         return view('admin.admin_blank');
+    }
+
+    //ADMIN PROFILE
+    public function AdminProfile(){
+        $id = Auth::user()->id;
+        $profileData = User::find($id);
+        return view('admin.admin_profile_view' ,compact('profileData'));
+
+    }//END METHOD
+
+
+    public function AdminIndex(){
+        return view('admin.index');
     }
 }
