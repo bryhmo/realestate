@@ -60,7 +60,7 @@ class AdminController extends Controller
     }//END METHOD
 
 
-    public function AdminIndex(){
-        return view('admin.index');
-    }
-}
+//     public function AdminIndex(){
+//         return view('admin.index');
+//     }
+ }
