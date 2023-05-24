@@ -329,6 +329,10 @@
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            @php
+                            $id = Auth::User()->id;
+                            $profileData = App\Models\User::find($id);
+                            @endphp
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="{{route('admin.profile')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -434,26 +438,6 @@
     <!-- Custom scripts for all pages-->
     <script src="{{asset('../assets/js/sb-admin-2.min.js')}}"></script>
 
-    <script type ="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>
-        @if(session::has('message'))
-            var type = "{{session::get(''alert-type','info')}}"
-            switch(type){
-                case 'info':
-                toastr.info("{{session::get('message')}}");
-                break;
-                case 'success':
-                toastr.success("{{session::get('message')}}");
-                break;
-                case 'warning':
-                toastr.warning("{{session::get('message')}}");
-                break;
-                case 'error':
-                toastr.error("{{session::get('message')}}");
-                break;
-            }
-        @endif
-    </script>
 
 </body>
 
