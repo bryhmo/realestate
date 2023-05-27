@@ -324,15 +324,18 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">isiaka ibrahim</span>
-                                <img class="img-profile rounded-circle" src="{{(!empty($profileData->photo))? url('upload/admin_images/'.$profileData->photo):url('upload/no_images.jpeg')}}">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                             @php
                             $id = Auth::User()->id;
                             $profileData = App\Models\User::find($id);
                             @endphp
+
+
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{$profileData->name}}</span>
+                                <img class="img-profile rounded-circle" src="{{(!empty($profileData->photo))? url('upload/admin_images/'.$profileData->photo):url('upload/no_images.jpeg')}}">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="{{route('admin.profile')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -366,22 +369,7 @@
                             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
                 
-                <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                
                 <!-- /.container-fluid -->
 
             </div>
