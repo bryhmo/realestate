@@ -59,6 +59,23 @@ class AdminController extends Controller
 
     }//END METHOD
 
+//profilestore data method 
+public function AdminProfileStore(Request $request){
+    $id = Auth::user()->id;
+    $data = User::find($id);
+    $data->name = $request->name;
+    $data->username = $request->username;
+    $data->email = $request->email;
+    $data->phone = $request->phone;
+    $data->address =$request->address;
+    $data->role = $request->role;
+    $data->status =$request->status;
+    //make sure yiu include the photo ,changing of photo profile when writing ypur own code after extracting from github
+    //look down to some code snippet for the photo replace and updating below 
+
+   // if ($data->photo)= $request -> photo;
+}//this is the end of the profile store method 
+
 
 //     public function AdminIndex(){
 //         return view('admin.index');
